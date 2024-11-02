@@ -18,6 +18,10 @@ body{
   height: 500px;
   background-color: #aaaaaa;
 }
+.info-card__block{
+  display: flex;
+  justify-content: center;
+}
 .info-card{
   width: 100px;
   height: auto;
