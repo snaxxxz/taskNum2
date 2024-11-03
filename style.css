@@ -1,29 +1,81 @@
 body{
-  background-color: aqua;
+  background-image:url(/img/bg1Num2.png) ,url(/img/bg2Num2.png);
+  background-size:cover, cover;
+  background-repeat:no-repeat, no-repeat;
+  background-position: center -100px;
+  background-color: #020E20;
+  margin: 0 auto;
+  width: 1000px;
 }
-.header{
-  color: red;
-  font-size: 40px;
+#inputForm{
+  position: relative;
+  margin: auto 0;
+  top: 350px;
+  left:0;
   width: auto;
-  text-align: center;
+  min-height: auto;
+
 }
-/* Инпат стайл */
-.input_file{
-  width: 300px;
-  height: auto;
-  background-color: #852020;
-}
-.main-block{
-  width: 500px;
-  height: 500px;
-  background-color: #aaaaaa;
-}
-.info-card__block{
+.main-card__block{
+  position: relative;
+  top: 60px;
+  left: 0px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: auto;
+  height: 300px;
+  background-color: #020e208e;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
 }
-.info-card{
+.preview-image{
   width: 100px;
-  height: auto;
-  background-color: #6b1c1c;
+  height: 100px;
+}
+
+.btn-sendForm {
+  position: relative;
+  left: 410px;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  color: rgb(165, 165, 165);
+  background: #020e208e;
+  background: linear-gradient(0deg, #020e208e 0%, #020e208e 100%);
+  cursor: pointer;
+  transition: ease 0.8s;
+}
+.btn-sendForm:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow:none;
+}
+.btn-sendForm:before,
+.btn-sendForm:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #020e208e;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-sendForm:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-sendForm:hover:before,
+.btn-sendForm:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
