@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Nunito";
+  src: url(/Шрифты/Nunito/Nunito-Medium.ttf);
+  margin: 0 auto;
+}
+@font-face{
+  font-family: "ArchivoBlack-Regular";
+  src: url(/Шрифты/ArchivoBlack-Regular/ArchivoBlack-Regular.ttf);
+  margin: 0 auto;
+}
+
 body{
   background-image:url(/img/bg1Num2.png) ,url(/img/bg2Num2.png);
   background-size:cover, cover;
@@ -6,11 +17,43 @@ body{
   background-color: #020E20;
   margin: 0 auto;
   width: 1000px;
+  height: 1000px;
 }
+.main-logo{
+  position: relative;
+  background-image: url(/img/hills\ 1.png);
+  background-size: contain;
+  right: 430px;
+  bottom: 230px;
+  width: 60px;
+  height: 60px;
+}
+.text-logo{
+  position: relative;
+  bottom: 280px;
+  right: 360px;
+}
+.mainTextHead{
+  position: relative;
+  left: 270px;
+  font-family: "Nunito";
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.589);
+  margin: 0;
+}
+.textHead{
+  position: relative;
+  color: rgba(255, 255, 255, 0.589);
+  left: 140px;
+  font-family: "Nunito";
+  margin: 0;
+  font-size: 126px;
+}
+
 #inputForm{
   position: relative;
   margin: auto 0;
-  top: 350px;
+  top: 50px;
   left:0;
   width: auto;
   min-height: auto;
@@ -33,9 +76,35 @@ body{
   width: 100px;
   height: 100px;
 }
+.item-card{
+  background-color: #020e208a;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: auto;
+  height: 200px;
+  border-radius: 20px;
+}
+p{
+  font-family: "Nunito";
+  margin: 5px;
+  color: white;
+}
+.btn-delete_block{
+  font-size: 20px;
+  color: #020E20;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.btn-delete_block:hover{
+  color: white;
+}
 
 .btn-sendForm {
+  font-family: "Nunito";
   position: relative;
+  top: 0px;
   left: 410px;
   width: 130px;
   height: 40px;
@@ -57,7 +126,6 @@ body{
 .btn-sendForm:after{
   content:'';
   position:absolute;
-  top:0;
   right:0;
   height:2px;
   width:0;
@@ -70,7 +138,6 @@ body{
 }
 .btn-sendForm:after{
   right:inherit;
-  top:inherit;
   left:0;
   bottom:0;
 }
@@ -78,4 +145,23 @@ body{
 .btn-sendForm:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+
+.loaders {
+  position: relative;
+  left: 450px;
+  top: 40px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f0f0f0; /* Цвет границы */
+  border-radius: 50%;
+  border-top-color: #3498db; /* Цвет вращающейся части */
+  animation: spin 1s linear infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

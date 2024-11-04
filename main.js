@@ -1,5 +1,25 @@
 const body = document.body;
 
+// шапка
+const headerMainTetx = document.createElement("h2");
+headerMainTetx.classList.add("mainTextHead");
+headerMainTetx.innerHTML = "сохрани свои";
+body.appendChild(headerMainTetx);
+
+const headerTetx = document.createElement("h1");
+headerTetx.classList.add("textHead");
+headerTetx.innerHTML = 'МОМЕНТЫ';
+body.appendChild(headerTetx);
+
+//лого
+const imgLogo = document.createElement('div');
+imgLogo.classList.add('main-logo');
+body.appendChild(imgLogo);
+const textLogo = document.createElement('p');
+textLogo.classList.add('text-logo');
+textLogo.innerHTML = 'Мои <br> моменты';
+body.appendChild(textLogo);
+
 // Форма
 const myForm = document.createElement('form');
 myForm.id = 'inputForm';
@@ -74,6 +94,7 @@ input.addEventListener('change', function(event) {
     // кнопка удаления блока
     const btnRemove = document.createElement('button');
     btnRemove.classList.add('btn-delete_block');
+    btnRemove.innerHTML ="🗑️";
     cardBlock.appendChild(btnRemove);
     btnRemove.addEventListener ('click',function(){
       mainCardBlock.removeChild(cardBlock);
@@ -89,7 +110,24 @@ input.addEventListener('change', function(event) {
 
 const btnSend = document.createElement('button');
 btnSend.classList.add('btn-sendForm');
-btnSend.type = 'submit';
+btnSend.type = 'sumbit';
 btnSend.innerHTML = 'SEND';
 myForm.appendChild(btnSend);
 
+const loader = document.createElement('div');
+loader.id = 'loader';
+loader.style.display = 'none'; 
+loader.classList.add('loaders');
+myForm.appendChild(loader);
+
+btnSend.addEventListener('click', function(event) {
+  event.preventDefault(); 
+  loader.style.display = 'block'; // Включаем загрузчик
+  // Имитация отправки формы
+  setTimeout(() => {
+    loader.style.display = 'none'; // Скрываем загрузчик
+    alert('Форма отправлена!');
+    location.reload();
+  }, 2000); // 2 секунды для симуляции загрузки
+
+});
