@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Nunito";
+  src: url(/Шрифты/Nunito/Nunito-Medium.ttf);
+  margin: 0 auto;
+}
+@font-face{
+  font-family: "ArchivoBlack-Regular";
+  src: url(/Шрифты/ArchivoBlack-Regular/ArchivoBlack-Regular.ttf);
+  margin: 0 auto;
+}
+
+body{
+  background-image:url(/img/bg1Num2.png) ,url(/img/bg2Num2.png);
+  background-size:cover, cover;
+  background-repeat:no-repeat, no-repeat;
+  background-position: center -100px;
+  background-color: #020E20;
+  margin: 0 auto;
+  width: 1000px;
+  height: 1000px;
+}
+.main-logo{
+  position: relative;
+  background-image: url(./img/hills\ 1.png);
+  background-size: contain;
+  right: 430px;
+  bottom: 230px;
+  width: 60px;
+  height: 60px;
+}
+.text-logo{
+  position: relative;
+  bottom: 280px;
+  right: 360px;
+}
+.mainTextHead{
+  position: relative;
+  left: 290px;
+  top: 30px;
+  font-family: "Nunito";
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.589);
+  margin: 0;
+}
+
+.textHead{
+  position: relative;
+  color: rgba(255, 255, 255, 0.589);
+  left: 160px;
+  font-family: "Nunito";
+  margin: 0;
+  font-size: 126px;
+}
+
+#inputForm{
+  position: relative;
+  margin: auto 0;
+  top: 50px;
+  left:0;
+  width: auto;
+  min-height: auto;
+
+}
+.main-card__block{
+  position: relative;
+  top: 60px;
+  left: 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 300px;
+  background-color: #020e208e;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  transition: ease 0.4s;
+}
+.main-card__block.active{
+  box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.5); 
+}
+.preview-image{
+  width: 100px;
+  height: 100px;
+}
+.item-card{
+  background-color: #020e208a;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: auto;
+  height: 200px;
+  border-radius: 20px;
+}
+p{
+  font-family: "Nunito";
+  margin: 5px;
+  color: white;
+}
+.btn-delete_block{
+  font-size: 20px;
+  color: #020E20;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+.btn-delete_block:hover{
+  color: white;
+}
+
+.btn-sendForm {
+  font-family: "Nunito";
+  position: relative;
+  top: 0px;
+  left: 410px;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  color: rgb(165, 165, 165);
+  background: #020e208e;
+  background: linear-gradient(0deg, #020e208e 0%, #020e208e 100%);
+  cursor: pointer;
+  transition: ease 0.8s;
+}
+.btn-sendForm:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow:none;
+}
+.btn-sendForm:before,
+.btn-sendForm:after{
+  content:'';
+  position:absolute;
+  right:0;
+  height:2px;
+  width:0;
+  background: #020e208e;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-sendForm:after{
+  right:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-sendForm:hover:before,
+.btn-sendForm:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+.loaders {
+  position: relative;
+  left: 450px;
+  top: 40px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f0f0f0; /* Цвет границы */
+  border-radius: 50%;
+  border-top-color: #3498db; /* Цвет вращающейся части */
+  animation: spin 1s linear infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+span.label {
+  background-image: url(/img/PlayButton.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 20px;
+  left: 410px;
+  z-index: 0;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 0;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
+#myInput{
+  left: 410px;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  opacity: 0;
+  cursor: pointer;
+}
