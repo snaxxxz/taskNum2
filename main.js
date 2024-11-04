@@ -26,11 +26,18 @@ myForm.id = 'inputForm';
 myForm.action = ' ';
 body.appendChild(myForm);
 
+//span for input
+const spanInput = document.createElement('span');
+spanInput.classList.add('label');
+spanInput.innerHTML = '';
+myForm.appendChild(spanInput);
+
 // Инпут в форме
 const input = document.createElement('input');
 input.id = 'myInput';
 input.type = 'file';
 input.name = '';
+input.classList.add('upload-box');
 input.setAttribute('multiple', true);
 input.setAttribute('accept', '.png, .jpg, .jpeg');
 myForm.appendChild(input);
@@ -38,7 +45,24 @@ myForm.appendChild(input);
 // Див блок с файлами
 const mainCardBlock = document.createElement('div');
 mainCardBlock.classList.add('main-card__block');
+mainCardBlock.id = 'dropZone';
 myForm.appendChild(mainCardBlock);
+
+const dropZone = document.getElementById("dropZone");
+
+dropZone.addEventListener("dragover",(e) => {
+  e.preventDefault();
+  dropZone.classList.add('active');
+});
+
+dropZone.addEventListener("drop",(e) => {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  input.files = files;
+  input.dispatchEvent(new Event("change"));
+  dropZone.classList.remove('active');
+});
+
 
 input.addEventListener('change', function(event) {
   const files = event.target.files;
@@ -89,7 +113,7 @@ input.addEventListener('change', function(event) {
 
     const textSize = document.createElement('p');
     cardBlock.appendChild(textSize);
-    textSize.textContent = `Размер: ${file.size} кб`;
+    textSize.textContent = `Размер: ${file.size} б`;
 
     // кнопка удаления блока
     const btnRemove = document.createElement('button');
