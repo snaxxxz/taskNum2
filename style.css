@@ -21,7 +21,7 @@ body{
 }
 .main-logo{
   position: relative;
-  background-image: url(/img/hills\ 1.png);
+  background-image: url(./img/hills\ 1.png);
   background-size: contain;
   right: 430px;
   bottom: 230px;
