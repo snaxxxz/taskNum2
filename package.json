@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "ds-javascript-task -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
